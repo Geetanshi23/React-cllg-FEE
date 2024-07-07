@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <div style="width: 1200px; margin: 0 auto; border: 1px dotted red;"></div>
+        <a href="/" style="font-size: 20px;">Home</a>
+        <form action="/edituser_submit" method="post">
+            <table align="center" border="1" width="600">
+                <tr>
+                    <td>User Name</td>
+                    <td><input type="text" name="name" value="<%=resultuser[0].name%>"/></td>
+                    </tr>
+                 <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" value="<%=resultuser[0].email%>"/></td>
+                    </tr>
+                 <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" value="<%=resultuser[0].password%>"/></td>
+                    </tr>
+                    <input type="hidden" value="<%=resultuser[0].userid%>" name="userid"/>
+                    <td colspan="2" align="center">
+                        <input type="submit"value="Edit user"/>
+                    </td>
+            </table>
+        </form>
+    </body>
+</html>

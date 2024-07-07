@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Edit Content</h1>
+    <form action="/editcontent_submit" method="post">
+        <input type="hidden" name="contentid" value="<%= result[0].contentid %>">
+        <table>
+            <tr>
+                <td>Content data</td>
+                <td>
+                    <input type="text" name="contentdata" value="<%= result[0].contentdata %>"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Title</td>
+                <td>
+                    <input type="text" name="title" value="<%= result[0].title %>"/>
+                </td>
+            </tr>
+            <!-- <tr>
+                <td>Datetime</td>
+                <td><input type="date" name="datetime" value="<%= result[0].datetime %>"/>
+                </td></tr> -->
+            <tr>
+                <td colspan="2">
+                    <button type="submit">Update content</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

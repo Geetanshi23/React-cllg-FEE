@@ -1,0 +1,25 @@
+<html>
+<body>
+    <div style="width: 1200px; margin:0 auto; border: 1px solid blue; background-color: yellow; color: blue; font-size: 24px;">
+        <a href="/" style="font-size: 20px;">Home</a>
+        <h1>List of content</h1>
+    <table align="center" border="1" cellspacing="5">
+        <tr>
+            <td>Content id</td>
+            <td>Content Data</td>
+            <td>Title</td>
+            <!-- <td>Datetime</td> -->
+            <td>Action</td>
+        </tr>
+    <% for(let i = 0; i<result.length; i++){ %>
+    <tr><td><%=result[i].contentid%></td>
+    <td><%=result[i].contentdata%></td>
+    <td><%=result[i].title%></td>
+    <!-- <td><%=result[i].datetime%></td> -->
+    <td><a href="/editcontent?id=<%=result[i].contentid%>">Edit</a> | <a href="/delcontent?id=<%=result[i].contentid%>">Delete</a></td>
+    </tr>
+    <% } %>
+    </table>
+</div> 
+</body>
+</html>

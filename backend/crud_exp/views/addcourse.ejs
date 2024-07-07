@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <div style="width: 1200px; margin: 0 auto; border: 1px dotted red;"></div>
+        <a href="/" style="font-size: 20px;">Home</a>
+        <form action="/addcourse_submit" method="post">
+            <table align="center" border="1" width="600">
+                <tr>
+                    <td>Course name</td>
+                    <td><input type="text" name="coursename" /></td>
+                    </tr>
+                <tr>
+                    <td>Duration</td>
+                    <td><input type="text" name="duration" /></td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                    <td><input type="number" name="price" min="1000"/></td>
+                    </tr>
+                    <td colspan="2" align="center">
+                        <input type="submit"value="Submit"/>
+                    </td>
+            </table>
+        </form>
+    </body>
+</html>

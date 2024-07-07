@@ -1,0 +1,25 @@
+<html>
+<body>
+    <div style="width: 1200px; margin:0 auto; border: 1px solid blue; background-color: yellow; color: blue; font-size: 24px;">
+        <a href="/" style="font-size: 20px;">Home</a>
+        <h1>List of course_video</h1>
+    <table align="center" border="1" cellspacing="5">
+        <tr>
+            <td>Coursevideo id</td>
+            <td>Video Title</td>
+            <td>Video Url</td>
+            <!-- <td>Course id</td> -->
+            <td>Action</td>
+        </tr>
+    <% for(let i = 0; i<result.length; i++){ %>
+    <tr><td><%=result[i].cvid%></td>
+    <td><%=result[i].video_title%></td>
+    <td><%=result[i].video_url%></td>
+    <!-- <td><%=result[i].courseid%></td> -->
+    <td><a href="/editcourse_video?id=<%=result[i].courseid%>">Edit</a> | <a href="/delcourse_video?id=<%=result[i].courseid%>">Delete</a></td>
+    </tr>
+    <% } %>
+    </table>
+</div> 
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Edit Course Lang</h1>
+    <form action="/editcourse_lang_submit" method="post">
+        <input type="hidden" name="langid" value="<%= result[0].langid %>">
+        <table>
+            <tr>
+                <td>Lang name</td>
+                <td>
+                    <input type="text" name="lang_name"  value="<%= result[0].lang_name %>"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Lang Description</td>
+                <td>
+                    <input type="text" name="lang_desc"  value="<%= result[0].lang_desc %>"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">Update course_lang</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

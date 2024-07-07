@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <div style="width: 1200px; margin: 0 auto; border: 1px dotted red;"></div>
+        <a href="/" style="font-size: 20px;">Home</a>
+        <form action="/edituser_course_submit" method="post">
+            <input type="hidden" name="ucid" value="<%= result && result.length > 0 ? result[0].ucid : '' %>">
+            <table align="center" border="1" width="600">
+                <tr>
+                    <td>Start date</td>
+                    <td><input type="date" name="startdate" /></td>
+                    </tr>
+                  <tr>
+                    <td>End date</td>
+                    <td><input type="date" name="enddate" /></td>
+                    </tr>
+                    <td colspan="2" align="center">
+                        <input type="submit"value="Update user_course"/>
+                    </td>
+            </table>
+        </form>
+    </body>
+</html>
